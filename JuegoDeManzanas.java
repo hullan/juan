@@ -25,13 +25,15 @@ public class JuegoDeManzanas {
                 int quitas = keyboard.nextInt();
                 if (quitas > 0 && quitas <= manzanasturno) {
                     totalManzanas = totalManzanas - quitas;
+                    System.out.println("Quedan " + totalManzanas);
                     empieza = "N";
-                } else {
-                    System.out.println("Número de manzanas incorrecto");
                 }
 
             } else {
-                int quitas = ((int) (Math.random() * 1000) % manzanasturno) + 1;
+                int quitas = (totalManzanas - 1) % (manzanasturno + 1);
+                if (quitas == 0) {
+                    quitas = 1;
+                }
                 totalManzanas = totalManzanas - quitas;
                 System.out.println("Quito " + quitas + " y quedan " + totalManzanas);
                 empieza = "S";
