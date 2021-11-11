@@ -21,7 +21,7 @@ public class Practica4 {
             }
             sum = sum + num2;
             System.out.print("" + num2 + ") % 9 = " + sum);
-            num = num2;
+            num = sum;
             System.out.print(" % 9 = ");
         }
 
